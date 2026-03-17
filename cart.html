@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<title>Shopping Cart</title>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<style>
+        body {
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                url("logo.png.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+      font-family: 'Poppins', sans-serif;
+}
+
+/* HOME SECTION */
+.home {
+    background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+                url("logo.png.png");
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+}
+      .navbar {
+   
+    background: linear-gradient(to right, rgba(8,20,12,0.95), rgba(20,40,30,0.95));
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+}
+
+.navbar .nav-link:hover {
+    color: gold !important;
+}
+</style>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg   sticky-top fw-bold shadow-sm">
+
+<div class="container  ">
+
+<a class="navbar-brand" href="index.html">Luxeriaa</a>
+
+<buttonclass="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+</button>
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="Ecomerse website.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="Products.html">Products</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active nav-link position-relative" href="Cart.html">
+Cart <i class="bi bi-cart"></i>
+</a>
+</li>
+
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- CART SECTION -->
+
+<div class="container mt-5">
+
+<h3 class="mb-4">Your Cart</h3>
+
+<table class="table table-bordered">
+
+<thead class="table-dark">
+
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="cartItems"></tbody>
+
+</table>
+
+<h4>Total: ₹<span id="total">0</span></h4>
+
+<br>
+
+<button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
+
+<a href="payment.html" class="btn btn-success">Proceed to Payment</a>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let table = document.getElementById("cartItems");
+
+let total = 0;
+
+cart.forEach((item,index)=>{
+
+total += item.price;
+
+table.innerHTML += `
+<tr>
+<td>${item.name}</td>
+<td>₹${item.price}</td>
+<td>
+<button class="btn btn-sm btn-danger" onclick="removeItem(${index})">
+<i class="bi bi-trash"></i> Remove
+</button>
+</td>
+</tr>
+`;
+
+});
+
+document.getElementById("total").innerText = total;
+
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+location.reload();
+
+}
+
+
+function clearCart(){
+
+localStorage.removeItem("cart");
+
+location.reload();
+
+}
+
+</script>
+
+</body>
+
+</html>
