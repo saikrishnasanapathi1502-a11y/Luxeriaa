@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products</title>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+        body {
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                url("logo.png.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+      font-family: 'Poppins', sans-serif;
+}
+
+/* HOME SECTION */
+.home {
+    background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+                url("logo.png.png");
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+}.navbar {
+   
+    background: linear-gradient(to right, rgba(8,20,12,0.95), rgba(20,40,30,0.95));
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+}
+
+.navbar .nav-link:hover {
+    color: gold !important;
+}   
+    .nav{
+        font-family: 'Courier New', Courier, monospace;
+        
+    }
+    .card{
+height:100%;
+display:flex;
+flex-direction:column;
+}
+.card-img-top{
+width:100%;
+height:200px;
+object-fit:contain;
+padding:10px;
+}
+
+.card-body{
+flex-grow:1;
+}
+
+
+
+.row{
+align-items:stretch;
+}
+
+
+</style>
+<Script>
+
+function addToCart(name,price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+name:name,
+price:price
+});
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+alert("Item Added To Cart");
+
+}
+</Script>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top fw-bold">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Luxeriaa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#Women">Women</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Men">Men</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Kids">Kids</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Needs">Needs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">🛒Cart </a></i></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="Products" class="container mt-5">
+        <h1 class="text-center fw-bold mb-5">Our Products</h1>
+
+        <!-- WOMEN SECTION -->
+        <h2 id="Women" class="fw-bold mt-5 mb-4">Womens Clothing</h2>
+        <div class="row">
+            <!-- Product 1 -->
+           <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/71WYOPSiwqL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Saree">
+                    <div class="card-body">
+                        <h5>Saree</h5>
+                        <p>₹1200</p>
+                        <button class="btn btn-dark" onclick="addToCart('Saree',1200)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/71rjJMwzQaL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Kurti">
+                    <div class="card-body">
+                        <h5>Kurti</h5>
+                        <p>₹800</p>
+                        <button class="btn btn-dark" onclick="addToCart('Kurti',800)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/91r8r+aipKL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Lehenga">
+                    <div class="card-body">
+                        <h5>Lehenga</h5>
+                        <p>₹2500</p>
+                        <button class="btn btn-dark" onclick="addToCart('Lehenga',2500)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+         <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/71I53evweVL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Salwar Suit">
+                    <div class="card-body">
+                        <h5>Salwar Suit</h5>
+                        <p>₹1500</p>
+                        <button class="btn btn-dark" onclick="addToCart('Salwar Suit',1500)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEN SECTION -->
+        <h2 id="Men" class="fw-bold mt-5 mb-4">Mens Clothing</h2>
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/51d9Q9hPieL._SX679_.jpg" class="card-img-top" alt="Shirts">
+                    <div class="card-body">
+                        <h5>Shirts</h5>
+                        <p>₹900</p>
+                        <button class="btn btn-dark" onclick="addToCart('Shirts',900)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+           <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" class="card-img-top" alt="T-Shirts">
+                    <div class="card-body">
+                        <h5>T-Shirts</h5>
+                        <p>₹500</p>
+                        <button class="btn btn-dark" onclick="addToCart('T-Shirts',500)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+           <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://images.unsplash.com/photo-1602293589930-45aad59ba3ab?w=600" class="card-img-top" alt="Jeans">
+                    <div class="card-body">
+                        <h5>Jeans</h5>
+                        <p>₹1400</p>
+                        <button class="btn btn-dark" onclick="addToCart('Jeans',1400)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/31GcVP1DMLL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Blazer">
+                    <div class="card-body">
+                        <h5>Blazer</h5>
+                        <p>₹2200</p>
+                        <button class="btn btn-dark" onclick="addToCart('Blazer',2200)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KIDS SECTION -->
+        <h2 id="Kids" class="fw-bold mt-5 mb-4">Kids Clothing</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/31zb6SSa31L._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Kids T-Shirts">
+                    <div class="card-body">
+                        <h5>Kids T-Shirts</h5>
+                        <p>₹400</p>
+                        <button class="btn btn-dark" onclick="addToCart('Kids T-Shirts',400)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/51OORouu3vL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Kids Shirts">
+                    <div class="card-body">
+                        <h5>Kids Shirts</h5>
+                        <p>₹800</p>
+                        <button class="btn btn-dark" onclick="addToCart('Kids Shirts',800)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/51QcYpUlXqL._SY879_.jpg" class="card-img-top" alt="Kids Shorts">
+                    <div class="card-body">
+                        <h5>Kids shorts</h5>
+                        <p>₹500</p>
+                        <button class="btn btn-dark" onclick="addToCart('Kids Shorts',500)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/814N2xrzKUL._SX569_.jpg" class="card-img-top" alt="Kids Jeans">
+                    <div class="card-body">
+                        <h5>Kids Jeans</h5>
+                        <p>₹730</p>
+                        <button class="btn btn-dark" onclick="addToCart('Kids Jeans',730)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----Needs----->    
+          <h2 id="Needs" class="fw-bold mt-5 mb-4">Needs</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/71uoAWspVTL._SX569_.jpg" class="card-img-top" alt="Watches">
+                    <div class="card-body">
+                        <h5>Watches</h5>
+                        <p>₹4000</p>
+                        <button class="btn btn-dark" onclick="addToCart('Watches',4000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+           <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/51QSCsv4Q9L._SY695_.jpg" class="card-img-top" alt="Handbags">
+                    <div class="card-body">
+                        <h5>Handbags</h5>
+                        <p>₹5200</p>
+                        <button class="btn btn-dark" onclick="addToCart('Handbag',5200)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/61v0YflwzAL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Necklaces">
+                    <div class="card-body">
+                        <h5>Neclaces</h5>
+                        <p>₹4900</p>
+                        <button class="btn btn-dark" onclick="addToCart('Neclaces',4900)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+           <div class="col-lg-3 col-md-4 col-6">
+                <div class="card text-center">
+                    <img src="https://m.media-amazon.com/images/I/71h5vwEsfAL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Ornaments">
+                    <div class="card-body">
+                        <h5>Ornuments</h5>
+                        <p>₹400</p>
+                        <button class="btn btn-dark" onclick="addToCart('Ornuments',400)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+<a href="Cart.html" button class="btn btn-Success" >Go to Cart</button>
