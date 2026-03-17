@@ -128,13 +128,13 @@ Cart <i class="bi bi-cart"></i>
 
 <script>
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("Cart")) || [];
 
-let table = document.getElementById("cartItems");
+let table = document.getElementById("CartItems");
 
 let total = 0;
 
-cart.forEach((item,index)=>{
+Cart.forEach((item,index)=>{
 
 total += item.price;
 
@@ -157,9 +157,9 @@ document.getElementById("total").innerText = total;
 
 function removeItem(index){
 
-cart.splice(index,1);
+Cart.splice(index,1);
 
-localStorage.setItem("cart",JSON.stringify(cart));
+localStorage.setItem("Cart",JSON.stringify(Cart));
 
 location.reload();
 
@@ -168,7 +168,7 @@ location.reload();
 
 function clearCart(){
 
-localStorage.removeItem("cart");
+localStorage.removeItem("Cart");
 
 location.reload();
 
