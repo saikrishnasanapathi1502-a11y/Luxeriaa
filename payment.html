@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Payment</title>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<style>
+  body {
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                url("logo.png.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+      font-family: 'Poppins', sans-serif;
+}
+
+/* HOME SECTION */
+.home {
+    background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+                url("logo.png.png");
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+}.navbar {
+   
+    background: linear-gradient(to right, rgba(8,20,12,0.95), rgba(20,40,30,0.95));
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+}
+
+.navbar .nav-link:hover {
+    color: gold !important;
+}
+</style>
+
+<body >
+    <nav class="navbar navbar-expand-lg  bg-white sticky-top fw-bold">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Luxeriaa</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto"> 
+        <li class="nav-item">
+          <a class="nav-link "  href="Ecomerse website.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Cart.html">Cart<i class="bi bi-cart"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<h2>Payment</h2>
+
+<form>
+<input type="text" class="form-control mb-3" placeholder="Name" required>
+<input type="text" class="form-control mb-3" placeholder="Card Number" required>
+<input type="text" class="form-control mb-3" placeholder="Expiry Date" required>
+
+<button type="submit" class="btn btn-success">Pay Now</button>
+</form>
+
+<h3>UPI</h3>
+
+<form>
+  
+
+<div class="mb-3">
+<label>Name</label>
+<input type="text" class="form-control" placeholder="Enter your name" required>
+</div>
+
+<div class="mb-3">
+<label>Number</label>
+<input type="text" class="form-control" placeholder="Enter your card number" required>
+</div>
+
+
+
+
+
+<button type="submit" class="btn btn-success">Pay Now</button>
+
+</form>
+
+</body>
+</html>
