@@ -68,14 +68,14 @@ align-items:stretch;
 
 function addToCart(name,price){
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("Cart")) || [];
 
 cart.push({
 name:name,
 price:price
 });
 
-localStorage.setItem("cart",JSON.stringify(cart));
+localStorage.setItem("cart",JSON.stringify(Cart));
 
 alert("Item Added To Cart");
 
