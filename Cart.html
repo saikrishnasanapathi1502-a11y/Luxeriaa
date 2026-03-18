@@ -5,7 +5,7 @@
  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-<title>Shopping cart</title>
+<title>Shopping Cart</title>
  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -78,8 +78,8 @@
 </li>
 
 <li class="nav-item">
-<a class="nav-link active nav-link position-relative" href="cart.html">
-cart <i class="bi bi-cart"></i>
+<a class="nav-link active nav-link position-relative" href="Cart.html">
+Cart <i class="bi bi-Cart"></i>
 </a>
 </li>
 
@@ -92,11 +92,11 @@ cart <i class="bi bi-cart"></i>
 
 </nav>
 
-<!-- cart SECTION -->
+<!-- Cart SECTION -->
 
 <div class="container mt-5">
 
-<h3 class="mb-4">Your cart</h3>
+<h3 class="mb-4">Your Cart</h3>
 
 <table class="table table-bordered">
 
@@ -110,7 +110,7 @@ cart <i class="bi bi-cart"></i>
 
 </thead>
 
-<tbody id="cartItems"></tbody>
+<tbody id="CartItems"></tbody>
 
 </table>
 
@@ -118,7 +118,7 @@ cart <i class="bi bi-cart"></i>
 
 <br>
 
-<button class="btn btn-danger" onclick="clearcart()">Clear cart</button>
+<button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
 
 <a href="payment.html" class="btn btn-success">Proceed to Payment</a>
 
@@ -128,13 +128,13 @@ cart <i class="bi bi-cart"></i>
 
 <script>
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let Cart = JSON.parse(localStorage.getItem("Cart")) || [];
 
-let table = document.getElementById("cartItems");
+let table = document.getElementById("CartItems");
 
 let total = 0;
 
-cart.forEach((item,index)=>{
+Cart.forEach((item,index)=>{
 
 total += item.price;
 
@@ -157,18 +157,18 @@ document.getElementById("total").innerText = total;
 
 function removeItem(index){
 
-cart.splice(index,1);
+Cart.splice(index,1);
 
-localStorage.setItem("cart",JSON.stringify(cart));
+localStorage.setItem("Cart",JSON.stringify(Cart));
 
 location.reload();
 
 }
 
 
-function clearcart(){
+function clearCart(){
 
-localStorage.removeItem("cart");
+localStorage.removeItem("Cart");
 
 location.reload();
 
